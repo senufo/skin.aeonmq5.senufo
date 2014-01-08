@@ -307,7 +307,7 @@ msgstr "Années"
 
 msgctxt "#31037"
 msgid "ARTISTS"
-msgstr "ARTITES"
+msgstr "ARTISTES"
 
 msgctxt "#31038"
 msgid "PARTY MODE"
