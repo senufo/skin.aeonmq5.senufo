@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.aeonmq5" version="1.9.0" name="Aeon MQ 5" provider-name="MarcosQui">
+	<addon id="skin.aeonmq5.senufo" version="1.9.0" name="Aeon MQ 5" provider-name="Senufo">
 	<requires>
 	<import addon="xbmc.gui" version="4.0.0"/>
 	<import addon="script.aeonmq5.extrapack" version="1.0.1"/>
@@ -29,10 +29,10 @@
 	<summary lang="es_AR">Aeon MQ 5, mejor, más ligero y más potente que nunca</summary>
 	<summary lang="es_MX">Aeon MQ 5, mejor, más ligero y más potente que nunca</summary>
 	<summary lang="fi">Aeon MQ 5, kehittyneempi, kevyempi ja tehokkaampi kuin koskaan aikaisemmin.</summary>
-	<summary lang="fr">Aeon MQ 5, amélioré, plus léger et plus puissant que jamais.</summary>	
-	<summary lang="it">Aeon MQ 5, migliore, più leggero e più potente che mai.</summary>	
-	<summary lang="ja">Aeon MQ 5。更に優れた、更に軽く、更にパワフル。</summary>	
-	<summary lang="ko">더욱 가볍게 더욱 강력하게 개선된 Aeon MQ5.</summary>	
+	<summary lang="fr">Aeon MQ 5, amélioré, plus léger et plus puissant que jamais.</summary>
+	<summary lang="it">Aeon MQ 5, migliore, più leggero e più potente che mai.</summary>
+	<summary lang="ja">Aeon MQ 5。更に優れた、更に軽く、更にパワフル。</summary>
+	<summary lang="ko">더욱 가볍게 더욱 강력하게 개선된 Aeon MQ5.</summary>
 	<summary lang="nl">Aeon MQ 5, verbeterd, lichter en krachtiger dan ooit.</summary>
 	<summary lang="pl">Aeon  MQ 5, ulepszona, jeszcze lżejsza i potężniejsza niż kiedykolwiek wcześniej.</summary>
 	<summary lang="pt_br">Aeon MQ 5, melhorada, mais leve e mais poderosa do que nunca.</summary>
