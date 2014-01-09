@@ -66,7 +66,6 @@
 	<control type="group"><!-- default group -->
 	<include>Animation_Window</include>
 	<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>
-
 	<control type="group" id="605"><!-- Arte de disco -->
 	<animation effect="slide" start="-500,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 	<animation effect="slide" start="-500,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
@@ -133,7 +132,7 @@
 	<visible>Player.HasVideo</visible>
 	</control>
 	</control>
-	
+
 	<control type="group" id="606"><!-- Lembrete PVR-->
 	<animation effect="slide" start="-500,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 	<animation effect="slide" start="-500,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
@@ -189,12 +188,12 @@
 	<aspectratio align="left" aligny="bottom">keep</aspectratio>
 	</control>
 	</control>
-	
+
 	<control type="group" id="604"><!-- Tocando agora -->
 	<posy>-50</posy>
     <include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomeNowPlaying</include>
 	<include condition="Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)">Animation_Widgets</include>
-	<animation effect="slide" start="0,0" end="0,220" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>	
+	<animation effect="slide" start="0,0" end="0,220" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
 	<animation effect="slide" start="0,0" end="0,385" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 	<visible>Player.HasMedia + ![Control.HasFocus(510) | Control.HasFocus(5100) | StringCompare(Container(9000).ListItem.Property(id),weather) + !Skin.HasSetting(noweatherwidget) | StringCompare(Container(9000).ListItem.Property(id),settings) + !Skin.HasSetting(nosystemwidget) | Skin.HasSetting(nonowplayingpanel) | Skin.HasSetting(highermainmenu) + Skin.HasSetting(submode)]</visible>
 	<control type="image">
@@ -502,14 +501,14 @@
 	</control>
 	</control>
 	</control>
-	
+
 	<control type="group" id="601"><!-- Painel de detalhes -->
 	<posx>0</posx>
 	<posy>-300</posy>
     <include condition="![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]">Animation_HomePanel</include>
 	<include condition="Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)">Animation_Widgets</include>
 	<animation effect="slide" start="0,0" end="0,470" condition="Skin.HasSetting(higherwidgets) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
-	<animation effect="slide" start="0,0" end="0,640" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>		
+	<animation effect="slide" start="0,0" end="0,640" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
 	<visible>Control.HasFocus(510) + ![StringCompare(Container(9000).ListItem.Property(id),favourites) | SubString(Container(9000).ListItem.Property(id),mymenu) | Skin.HasSetting(nodetailspanel)]</visible>
 	<control type="image">
 	<posx>0</posx>
@@ -519,7 +518,7 @@
 	<texture flipy="true">shadow_h.png</texture>
 	<colordiffuse>C3FFFFFF</colordiffuse>
 	<visible>![Skin.HasSetting(higherwidgets) | Skin.HasSetting(highermainmenu)]</visible>
-	</control>	
+	</control>
 	<control type="image"><!-- Fundo -->
 	<posx>0</posx>
 	<posy>20</posy>
@@ -758,7 +757,7 @@
 	<animation effect="fade" start="100" end="0" time="400" easing="out" tween="sine" condition="[SubString(skin.string(widgetsmode),manual) | SubString(skin.string(widgetsmode),auto) + !Control.IsVisible(9931) | Player.HasMedia + System.IdleTime(8)] + ![Control.HasFocus(510) | Control.HasFocus(520) | Control.HasFocus(5100)]">Conditional</animation>
 	<include condition="Library.HasContent(Movies) + ![IsEmpty(skin.string(movieswidget)) | Skin.HasSetting(nomovieswidget)]">mf_contentmovies</include>
 	<include condition="Library.HasContent(TVShows) + ![IsEmpty(skin.string(tvshowswidget)) | Skin.HasSetting(notvshowswidget)]">mf_contenttvshows</include>
-	<include condition="Library.HasContent(MusicVideos) + ![IsEmpty(skin.string(concertswidget)) |  Skin.HasSetting(noconcertswidget)]">mf_contentconcerts</include>	
+	<include condition="Library.HasContent(MusicVideos) + ![IsEmpty(skin.string(concertswidget)) |  Skin.HasSetting(noconcertswidget)]">mf_contentconcerts</include>
 	<include condition="Library.HasContent(Music) + ![IsEmpty(skin.string(musicwidget)) | Skin.HasSetting(nomusicwidget)]">mf_contentmusic</include>
 	<include condition="System.HasAddon(script.favourites) + ![IsEmpty(skin.string(favouriteswidget)) | Skin.HasSetting(nofavouriteswidget)]">mf_contentfavourites</include>
 	<include condition="!IsEmpty(skin.string(mymenu1widget))">mf_contentmymenu1</include>
@@ -806,10 +805,10 @@
 	<include condition="System.HasAddon(script.games.rom.collection.browser) + ![IsEmpty(skin.string(gameswidget)) | Skin.HasSetting(nogameswidget)]">mf_contentgames</include>
 	<include condition="![IsEmpty(skin.string(livetvwidget)) | Skin.HasSetting(nonextairedwidget)]">mf_contentnextaired</include>
 	<include condition="!Skin.HasSetting(nosystemwidget)">mf_contentsystem</include>
-	<include condition="![IsEmpty(skin.string(weatherwidget)) | Skin.HasSetting(noweatherwidget)]">mf_weather</include>	
-	</control>	
-	
-	<control type="group"><!-- Status da biblioteca -->	
+	<include condition="![IsEmpty(skin.string(weatherwidget)) | Skin.HasSetting(noweatherwidget)]">mf_weather</include>
+	</control>
+
+	<control type="group"><!-- Status da biblioteca -->
 	<animation effect="slide" start="-500,0" end="0,0" time="500" delay="2000" tween="sine" easing="out" condition="Window.Previous(Startup)">WindowOpen</animation>
 	<animation effect="slide" start="-500,0" end="0,0" time="500" delay="1000" tween="sine" easing="out" condition="!Window.Previous(Startup)">WindowOpen</animation>
 	<animation effect="slide" start="-500,0" end="0,0" time="500" delay="500" tween="sine" easing="out">Visible</animation>
@@ -841,7 +840,37 @@
 	<scroll>true</scroll>
 	</control>
 	</control>
-	
+
+    <!-- TEST COURRIER -->
+    <control type="group">
+        <!--    <visible>true</true> -->
+	<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
+
+        <control type="image">
+    	    <posx>880</posx>
+    	    <posy>05</posy>
+        	<width>500</width>
+        	<height>26</height>
+            <texture flipx="false">widgets_panel.png</texture>
+	        <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+        	<include>Animation_HomeGlass</include>
+        </control>
+	    <control type="label">
+        	<posx>885</posx>
+    	    <posy>08</posy>
+    	    <width>480</width>
+        	<height>20</height>
+    	    <align>left</align>
+        	<aligny>center</aligny>
+	        <font>Font_18A</font>
+        	<textcolor>FFFFFAF0</textcolor>
+        	<label>$INFO[Window.property(notifier.name1)] : $INFO[Window.property(notifier.msg1)] - $INFO[Window.property(notifier.name2)] : $INFO[Window.property(notifier.msg2)] - $INFO[Window.property(notifier.name3)] : $INFO[Window.property(notifier.msg3)]</label>
+	        <scroll>true</scroll>
+        	<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
+	        <animation effect="slide" start="0,0" end="-75,0" condition="![StringCompare(Weather.Plugin,weather.ozweather) | StringCompare(Weather.Plugin,weather.worldweatheronline) | StringCompare(Weather.Plugin,weather.wunderground) | StringCompare(Weather.Plugin,weather.yahoo)]">Conditional</animation>
+	    </control>
+    </control>
+    <!-- FIN TEST -->
 	<control type="group"><!-- Data e clima -->
 	<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 	<animation effect="slide" start="1280,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
@@ -880,7 +909,7 @@
 	<animation effect="slide" start="0,0" end="-75,0" condition="![StringCompare(Weather.Plugin,weather.ozweather) | StringCompare(Weather.Plugin,weather.worldweatheronline) | StringCompare(Weather.Plugin,weather.wunderground) | StringCompare(Weather.Plugin,weather.yahoo)]">Conditional</animation>
 	</control>
 	</control>
-	
+
 	<control type="group"><!-- Controles -->
 	<visible>Player.HasMedia</visible>
 	<animation effect="slide" start="1280,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
@@ -1027,8 +1056,8 @@
 	</content>
 	</control>
 	</control>
-	
-	<control type="group"><!-- Subtitulo dos widgets -->	
+
+	<control type="group"><!-- Subtitulo dos widgets -->
 	<animation effect="slide" start="-500,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">Visible</animation>
 	<animation effect="slide" start="0,0" end="-500,0" time="500" tween="sine" easing="out">Hidden</animation>
 	<animation effect="slide" start="0,0" end="0,-605" condition="Skin.HasSetting(highertotals) + !Skin.HasSetting(highermainmenu)">Conditional</animation>
@@ -1057,7 +1086,7 @@
 	<scroll>true</scroll>
 	</control>
 	</control>
-	
+
 	<!-- Menu Principal -->
 	<control type="group">
 	<animation effect="slide" start="0,0" end="0,-210" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(highermainmenu)">Conditional</animation>
@@ -1213,19 +1242,5 @@
 	<include>BGBlack</include>
 	<include>TrailerWindow</include>
 	</control>
-		<!---------------- TEST pour LE MAIL --!>
-		<control type="label" id="1112">
-                        <description>notifier server  label</description>
-                        <posx>40</posx>
-                        <posy>60</posy>
-                        <width>530</width>
-                        <height>30</height>
-                        <font>font13_title</font>
-                        <label>=== $INFO[Window.property(notifier.name1)] : $INFO[Window.property(notifier.msg1)] ===</label>
-                        <align>center</align>
-                        <aligny>center</aligny>
-                        <textcolor>FFEB9E17</textcolor>
-                        <shadowcolor>FF000000</shadowcolor>
-                </control>
 	</controls>
 	</window>
