@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<addon id="skin.aeonmq5.senufo" version="1.9.0" name="Aeon MQ 5" provider-name="Senufo">
+	<addon id="skin.aeonmq5.senufo" version="1.9.0b" name="Aeon MQ 5" provider-name="Senufo">
 	<requires>
 	<import addon="xbmc.gui" version="4.0.0"/>
 	<import addon="script.aeonmq5.extrapack" version="1.0.1"/>
