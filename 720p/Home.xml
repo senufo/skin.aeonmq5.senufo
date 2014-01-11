@@ -841,11 +841,9 @@
 	</control>
 	</control>
 
-    <!-- TEST COURRIER -->
+    <!-- Display mail notifier -->
     <control type="group">
-        <!--    <visible>true</true> -->
-	<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
-
+        <visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
         <control type="image">
     	    <posx>880</posx>
     	    <posy>05</posy>
@@ -857,6 +855,7 @@
         </control>
 	    <control type="label">
         	<posx>885</posx>
+            <visible>Substring(Window.property(notifier.enable1),true)</visible>
     	    <posy>08</posy>
     	    <width>480</width>
         	<height>20</height>
@@ -864,13 +863,37 @@
         	<aligny>center</aligny>
 	        <font>Font_18A</font>
         	<textcolor>FFFFFAF0</textcolor>
-        	<label>$INFO[Window.property(notifier.name1)] : $INFO[Window.property(notifier.msg1)] - $INFO[Window.property(notifier.name2)] : $INFO[Window.property(notifier.msg2)] - $INFO[Window.property(notifier.name3)] : $INFO[Window.property(notifier.msg3)]</label>
+        	<label>$INFO[Window.property(notifier.name1)] : $INFO[Window.property(notifier.msg1)]</label>
 	        <scroll>true</scroll>
-        	<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(9000)">conditional</animation>
-	        <animation effect="slide" start="0,0" end="-75,0" condition="![StringCompare(Weather.Plugin,weather.ozweather) | StringCompare(Weather.Plugin,weather.worldweatheronline) | StringCompare(Weather.Plugin,weather.wunderground) | StringCompare(Weather.Plugin,weather.yahoo)]">Conditional</animation>
+	    </control>
+	    <control type="label">
+        	<posx>1050</posx>
+            <visible>Substring(Window.property(notifier.enable2),true)</visible>
+    	    <posy>08</posy>
+    	    <width>480</width>
+        	<height>20</height>
+    	    <align>left</align>
+        	<aligny>center</aligny>
+	        <font>Font_18A</font>
+        	<textcolor>FFFFFAF0</textcolor>
+        	<label> | $INFO[Window.property(notifier.name2)] : $INFO[Window.property(notifier.msg2)]</label>
+	        <scroll>true</scroll>
+	    </control>
+	    <control type="label">
+        	<posx>1150</posx>
+            <visible>Substring(Window.property(notifier.enable3),true)</visible>
+    	    <posy>08</posy>
+    	    <width>480</width>
+        	<height>20</height>
+    	    <align>left</align>
+        	<aligny>center</aligny>
+	        <font>Font_18A</font>
+        	<textcolor>FFFFFAF0</textcolor>
+        	<label> | $INFO[Window.property(notifier.name3)] : $INFO[Window.property(notifier.msg3)]</label>
+	        <scroll>true</scroll>
 	    </control>
     </control>
-    <!-- FIN TEST -->
+    <!-- End Display mail notifier -->
 	<control type="group"><!-- Data e clima -->
 	<visible>![Skin.HasSetting(nohometime) | Skin.HasSetting(highertime) + [Window.IsVisible(104) | Window.IsVisible(107) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(614)]]</visible>
 	<animation effect="slide" start="1280,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
